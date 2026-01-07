@@ -24,7 +24,7 @@ body{
 		font-size: 14px;
 		text-align: center;
 		color: #ffffff;
-		background: #59b73f;
+		background:  #78866B;
 		height: 41px;
 		line-height: 41px;
 		width: 41px;
@@ -62,14 +62,14 @@ a, a:active, a:focus {
 }
 
 .text-secondary, .text-secondary-hover:hover {
-		color: #59b73f !important;
+		color: #000000 !important;
 }
 .display-25 {
 		font-size: 1.4rem;
 }
 
 .text-primary, .text-primary-hover:hover {
-		color: #ff712a !important;
+		color:#877359 !important;
 }
 
 p {
@@ -78,4 +78,15 @@ p {
 
 .mb-1-6, .my-1-6 {
 		margin-bottom: 1.6rem;
+}
+
+
+TWDd {
+	margin-top: 20px;
+	border-radius: 0.3rem;
+	overflow: hidden;
+	.image-container {
+		width: 100%;
+		height: auto;
+	}
 }
