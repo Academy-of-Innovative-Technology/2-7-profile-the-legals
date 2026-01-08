@@ -4,7 +4,7 @@
 var img = document.createElement("img");
 
 // 2. Set the source path
-img.src = "path/to/your/image.jpg"; // Use a relative or absolute URL
+img.src = ""; // Use a relative or absolute URL
 
 // 3. Set optional attributes for accessibility and styling
 img.alt = "";
