@@ -58,7 +58,16 @@ const profile = {
     skillsTittle: "#Skills & Talents",
     Skills[
         {
-            name: "Acting Range", percentage:
-        }
-    ]
-}
+            name: "Acting Range", percentage:96, color: "bg-primary" },
+            { name: "Character Devlopment", percentage: 94, color: "bg-success"},
+            { name: "Film, Voice and Stage Actor", percentage: 92, color: "bg-danger" },
+            { name: "Improvisation", percentage: 88, color: "bg-warning"  }
+    ],
+     socialLinks: [
+    { icon: "fab fa-twitter", url: "https://twitter.com/andrewlincoln", title: "Twitter" },
+    { icon: "fab fa-instagram", url: "https://instagram.com/andrewlincoln", title: "Instagram" },
+    { icon: "fab fa-imdb", url: "https://www.imdb.com/name/nm0513840/", title: "IMDb" },
+    { icon: "fab fa-facebook", url: "https://www.facebook.com/andrewlincoln", title: "Facebook" }
+  ]
+};
+
