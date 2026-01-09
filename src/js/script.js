@@ -71,3 +71,61 @@ const profile = {
   ]
 };
 
+// Function to render the profile 
+function renderProfile(){
+     // Update profile image
+  document.querySelector("#profileImage").src = profile.imageUrl;
+  document.querySelector("#profileImage").alt = profile.name;
+
+  // Update headings
+  document.querySelector("#profileName").innerText = profile.name;
+  document.querySelector("#profileTitle").innerText = profile.title;
+  document.querySelector("#aboutTitle").innerText = profile.aboutTitle;
+  document.querySelector("#skillsTitle").innerText = profile.skillsTitle;
+
+   // Update about text
+  document.querySelector("#aboutText").innerText = profile.aboutText;
+
+  // Update contact information
+  const contactInfo = document.querySelector("#contactInfo");
+  const contactHTML = `
+    <li class="mb-3"><i class="fas fa-envelope me-3 text-secondary"></i><span>${profile.email}</span></li>
+    <li class="mb-3"><i class="fas fa-phone me-3 text-secondary"></i>${profile.phone}</li>
+    <li><i class="fas fa-map-marker-alt me-3 text-secondary"></i>${profile.location}</li>
+  `;
+contactInfo.innerHTML = contactHTML;
+
+  // Update social links
+  const socialLinks = document.querySelector("#socialLinks");
+  let socialHTML = "";
+  profile.socialLinks.forEach(link => {
+    socialHTML += `<li><a href="${link.url}" target="_blank" class="rounded-3 social-btn" title="${link.title}"><i class="${link.icon}"></i></a></li>`;
+  });
+  socialLinks.innerHTML = socialHTML;
+    // Update skills section
+  const skillsContainer = document.querySelector("#skillsContainer");
+  let skillsHTML = "";
+  profile.skills.forEach(skill => {
+    skillsHTML += `
+      <div class="mb-4">
+        <div class="d-flex justify-content-between mb-2">
+          <strong>${skill.name}</strong>
+          <span>${skill.percentage}%</span>
+        </div>
+        <div class="progress">
+          <div class="progress-bar ${skill.color}" role="progressbar" style="width: ${skill.percentage}%" aria-valuenow="${skill.percentage}" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+      </div>
+    `;
+  });
+  skillsContainer.innerHTML = skillsHTML;
+
+  // Update page background color
+  document.body.style.backgroundColor = "#f8f9fa";
+}
+
+// Execute render when DOM is loaded
+document.addEventListener("DOMContentLoaded", renderProfile);
+
+
+
